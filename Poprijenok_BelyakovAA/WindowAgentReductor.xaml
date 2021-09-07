@@ -1,0 +1,22 @@
+﻿<Window x:Class="Poprijenok_BelyakovAA.WindowAgentReductor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
+        mc:Ignorable="d"
+        Title="WindowAgentReductor" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="tbTitle" HorizontalAlignment="Left" Height="37" Margin="242,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="233" FontFamily="Comic Sans MS"/>
+        <ComboBox Name="cbAgents" HorizontalAlignment="Left" Margin="242,56,0,0" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS" Height="31"/>
+        <TextBox Name="tbAddr" HorizontalAlignment="Left" Height="38" Margin="242,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="436" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbINN" HorizontalAlignment="Left" Height="44" Margin="242,153,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="293" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbKPP" HorizontalAlignment="Left" Height="24" Margin="242,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbDirector" HorizontalAlignment="Left" Height="35" Margin="242,243,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbTel" HorizontalAlignment="Left" Height="45" Margin="242,283,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="242,333,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbLogo" HorizontalAlignment="Left" Height="23" Margin="242,361,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="246" FontFamily="Comic Sans MS"/>
+        <TextBox Name="tbPriority" HorizontalAlignment="Left" Height="20" Margin="242,389,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="268" FontFamily="Comic Sans MS"/>
+
+    </Grid>
+</Window>

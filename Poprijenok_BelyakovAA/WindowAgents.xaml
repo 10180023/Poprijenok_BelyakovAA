@@ -1,0 +1,49 @@
+﻿<Window x:Class="Poprijenok_BelyakovAA.WindowAgents"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
+        mc:Ignorable="d"
+        Title="WindowAgents" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Grid.Row="0" Fill="#43DCFE"/>
+        <Label Content="Попрыженок" HorizontalAlignment="Left" Margin="364,40,0,0" VerticalAlignment="Top" Foreground="#FF020202" FontSize="24" FontFamily="Comic Sans MS"/>
+        <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="57,5,0,0" VerticalAlignment="Top" Width="100" Source="Img\Попрыженок.png"/>
+
+
+        <DataGrid Name="dgAgents" Grid.Row="1" HorizontalAlignment="Left" Height="245" Margin="65,59,0,0" VerticalAlignment="Top" Width="670" AutoGenerateColumns="False" FontFamily="Comic Sans MS">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="1*"/>
+                <DataGridTextColumn Header="YearSales" Width="1*"/>
+                <DataGridTextColumn Header="Sale" Width="1*"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="1*"/>
+                <DataGridTextColumn Header="Type" Binding="{Binding AgentType}" Width="1*"/>
+                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="1*"/>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Source="picture.png" Width="45px" Height="25px"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button Content="Edit" Click="Button_Click" Background="#FFF9969E"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <TextBox Name="tbFinder" HorizontalAlignment="Left" Height="23" Margin="82,22,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
+        <ComboBox Name="cbTypes" HorizontalAlignment="Left" Margin="570,23,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
+
+    </Grid>
+</Window>
