@@ -17,6 +17,7 @@
         <TextBox Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="242,333,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS"/>
         <TextBox Name="tbLogo" HorizontalAlignment="Left" Height="23" Margin="242,361,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="246" FontFamily="Comic Sans MS"/>
         <TextBox Name="tbPriority" HorizontalAlignment="Left" Height="20" Margin="242,389,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="268" FontFamily="Comic Sans MS"/>
+        <Button Content="Сохранить" HorizontalAlignment="Left" Margin="630,374,0,0" VerticalAlignment="Top" Width="97" Height="35" Click="Button_Click"/>
 
     </Grid>
 </Window>

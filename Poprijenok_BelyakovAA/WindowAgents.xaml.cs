@@ -21,7 +21,11 @@ namespace Poprijenok_BelyakovAA
     public partial class WindowAgents : Window
     {
         static Agent agent { get; set; }
+        WindowAgentReductor windowAgentReductor = new WindowAgentReductor();
 
+        /// <summary>
+        /// Подгрузка необходимых баз из БД, заполнение данных в таблицу и выпадающий список
+        /// </summary>
         public WindowAgents()
         {
             InitializeComponent();
@@ -31,12 +35,14 @@ namespace Poprijenok_BelyakovAA
             dgAgents.ItemsSource = DBPoprij.db.Agent.ToList();
             cbTypes.ItemsSource = DBPoprij.db.AgentType.ToList();
         }
-
+        /// <summary>
+        /// Открытие и передача данных для окна редактирования агента
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             agent = dgAgents.SelectedItem as Agent;
-            WindowAgentReductor windowAgentReductor = new WindowAgentReductor();
-            windowAgentReductor.Show();
 
             windowAgentReductor.tbAddr.Text = agent.Address;
             windowAgentReductor.tbDirector.Text = agent.DirectorName;
@@ -48,7 +54,45 @@ namespace Poprijenok_BelyakovAA
             windowAgentReductor.tbTel.Text = agent.Phone.ToString();
             windowAgentReductor.tbTitle.Text = agent.Title;
 
+            windowAgentReductor.isAdd = false;
+
+            if (windowAgentReductor.ShowDialog() == true)
+            {
+                DBPoprij.db.SaveChanges();
+                dgAgents.ItemsSource = DBPoprij.db.Agent.ToList();
+                dgAgents.Items.Refresh();
+            }
             //windowAgentReductor.cbAgents.SelectedIndex = (int)agent.AgentTypeID - 1;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            windowAgentReductor.isAdd = true;
+            if (windowAgentReductor.ShowDialog() == true)
+            {
+                DBPoprij.db.SaveChanges();
+                dgAgents.ItemsSource = DBPoprij.db.Agent.ToList();
+                dgAgents.Items.Refresh();
+            }
+        }
+
+        private void GetAgent(string search, string filter, string sort)
+        {
+            List < Agent > listAgents = DBPoprij.db.Agent.ToList();
+
+            //if (sort == "По возрастанию")
+            //{
+            //    listAgents.OrderBy(c => c.Priority).ToList();
+            //}
+            //else
+            //{
+            //    listAgents.OrderByDescending(c => c.Priority).ToList();
+            //}
+
+            //dgAgents.ItemsSource = listAgents;
+
+
+            listAgents = listAgents.Where(c => c.AgentType = filter as AgentType);
         }
     }
 }

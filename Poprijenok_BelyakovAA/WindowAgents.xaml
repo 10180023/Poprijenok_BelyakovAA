@@ -16,7 +16,7 @@
         <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="57,5,0,0" VerticalAlignment="Top" Width="100" Source="Img\Попрыженок.png"/>
 
 
-        <DataGrid Name="dgAgents" Grid.Row="1" HorizontalAlignment="Left" Height="245" Margin="65,59,0,0" VerticalAlignment="Top" Width="670" AutoGenerateColumns="False" FontFamily="Comic Sans MS">
+        <DataGrid Name="dgAgents" Grid.Row="1" HorizontalAlignment="Left" Height="245" Margin="65,59,0,0" VerticalAlignment="Top" Width="625" AutoGenerateColumns="False" FontFamily="Comic Sans MS">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="1*"/>
                 <DataGridTextColumn Header="YearSales" Width="1*"/>
@@ -44,6 +44,8 @@
         </DataGrid>
         <TextBox Name="tbFinder" HorizontalAlignment="Left" Height="23" Margin="82,22,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
         <ComboBox Name="cbTypes" HorizontalAlignment="Left" Margin="570,23,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
+        <Button Content="Добавить" HorizontalAlignment="Left" Margin="707,89,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <ComboBox Name="cbSort"  HorizontalAlignment="Left" Margin="330,23,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>

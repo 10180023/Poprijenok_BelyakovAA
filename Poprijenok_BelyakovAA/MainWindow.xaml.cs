@@ -25,19 +25,19 @@ namespace Poprijenok_BelyakovAA
             InitializeComponent();
             
         }
-
+        /// <summary>
+        /// Кнопка открытия окна с агентами
+        /// </summary>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new WindowAgents().Show();
             Close();
         }
-
-        private void Button_Click1(object sender, RoutedEventArgs e)
-        {
-            new WindowAgentReductor().Show();
-            Close();
-        }
-
+        /// <summary>
+        /// Кнопка закрытия приложения
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Close();
