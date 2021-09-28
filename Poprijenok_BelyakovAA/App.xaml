@@ -4,6 +4,49 @@
              xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <Style x:Key="Header">
+            <Setter Property="Label.FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Label.FontSize" Value="24"/>
+            <Setter Property="Label.Height" Value="50"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="#FFF9969E"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Height" Value="40"/>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
+
+
+        <Style TargetType="TextBox">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Height" Value="35"/>
+        </Style>
+        
+        <Style TargetType="ComboBoxItem">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="35"/>
+        </Style>
+        
+        <!--Можно будет убрать-->
+        <Style TargetType="DataGrid">
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="FontSize" Value="10"/>
+        </Style>
+        
+        
     </Application.Resources>
 </Application>

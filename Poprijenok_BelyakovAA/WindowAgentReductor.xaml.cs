@@ -19,10 +19,21 @@ namespace Poprijenok_BelyakovAA
     /// </summary>
     public partial class WindowAgentReductor : Window
     {
+        public bool isAdd = false;
         public WindowAgentReductor()
         {
             InitializeComponent();
             cbAgents.ItemsSource = DBPoprij.db.AgentType.ToList();
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

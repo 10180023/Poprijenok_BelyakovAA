@@ -5,45 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
         mc:Ignorable="d"
-        Title="WindowAgents" Height="450" Width="800">
+        Title="WindowAgents" Height="450" Width="800"
+        Icon="Img\Попрыженок.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Fill="#43DCFE"/>
-        <Label Content="Попрыженок" HorizontalAlignment="Left" Margin="364,40,0,0" VerticalAlignment="Top" Foreground="#FF020202" FontSize="24" FontFamily="Comic Sans MS"/>
-        <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="57,5,0,0" VerticalAlignment="Top" Width="100" Source="Img\Попрыженок.png"/>
-
-
-        <DataGrid Name="dgAgents" Grid.Row="1" HorizontalAlignment="Left" Height="245" Margin="65,59,0,0" VerticalAlignment="Top" Width="670" AutoGenerateColumns="False" FontFamily="Comic Sans MS">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="1*"/>
-                <DataGridTextColumn Header="YearSales" Width="1*"/>
-                <DataGridTextColumn Header="Sale" Width="1*"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="1*"/>
-                <DataGridTextColumn Header="Type" Binding="{Binding AgentType}" Width="1*"/>
-                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="1*"/>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <Image Source="picture.png" Width="45px" Height="25px"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Button Content="Edit" Click="Button_Click" Background="#FFF9969E"/>
-                            </StackPanel>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-            </DataGrid.Columns>
-        </DataGrid>
-        <TextBox Name="tbFinder" HorizontalAlignment="Left" Height="23" Margin="82,22,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
-        <ComboBox Name="cbTypes" HorizontalAlignment="Left" Margin="570,23,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1" FontFamily="Comic Sans MS"/>
-
+        <Label Content="Попрыженок" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="#FF020202" Style="{StaticResource Header}"/>
+        <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="50,5,0,0" VerticalAlignment="Center" Width="100" Source="Img\Попрыженок.png"/>
+        <Button Name="btnBack" Content="Назад" Grid.Row="0" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="60" Click="btnBack_Click"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,250" Orientation="Horizontal">
+            <TextBox Name="tbFinder" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="200" Grid.Row="1"/>
+            <ComboBox x:Name="cbTypesFilter" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="cbSort" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        </StackPanel>
+        <Frame Name="frameAgents" Grid.Row="1" Margin="0,50,0,0"/>
+        
     </Grid>
 </Window>

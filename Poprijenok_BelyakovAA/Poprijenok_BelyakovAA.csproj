@@ -99,6 +99,9 @@
     </Compile>
     <Compile Include="Model\AgentType.cs" />
     <Compile Include="Model\DBPoprij.cs" />
+    <Compile Include="PageAgents.xaml.cs">
+      <DependentUpon>PageAgents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <DependentUpon>ModelPoprijenok.tt</DependentUpon>
     </Compile>
@@ -141,6 +144,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageAgents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="WindowAgentReductor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

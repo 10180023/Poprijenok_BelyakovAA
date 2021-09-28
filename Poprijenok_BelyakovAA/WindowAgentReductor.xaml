@@ -5,18 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
         mc:Ignorable="d"
-        Title="WindowAgentReductor" Height="450" Width="800">
+        Title="WindowAgentReductor" Height="550" Width="800"
+        Icon="Img\Попрыженок.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBox Name="tbTitle" HorizontalAlignment="Left" Height="37" Margin="242,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="233" FontFamily="Comic Sans MS"/>
-        <ComboBox Name="cbAgents" HorizontalAlignment="Left" Margin="242,56,0,0" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS" Height="31"/>
-        <TextBox Name="tbAddr" HorizontalAlignment="Left" Height="38" Margin="242,101,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="436" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbINN" HorizontalAlignment="Left" Height="44" Margin="242,153,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="293" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbKPP" HorizontalAlignment="Left" Height="24" Margin="242,202,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbDirector" HorizontalAlignment="Left" Height="35" Margin="242,243,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="312" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbTel" HorizontalAlignment="Left" Height="45" Margin="242,283,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbEmail" HorizontalAlignment="Left" Height="23" Margin="242,333,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="256" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbLogo" HorizontalAlignment="Left" Height="23" Margin="242,361,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="246" FontFamily="Comic Sans MS"/>
-        <TextBox Name="tbPriority" HorizontalAlignment="Left" Height="20" Margin="242,389,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="268" FontFamily="Comic Sans MS"/>
-
+        <StackPanel HorizontalAlignment="Center" Margin="300,0,0,0" VerticalAlignment="Top">
+            <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
+            <ComboBox Name="cbAgents" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="256"/>
+            <TextBox Name="tbAddr" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380"/>
+            <TextBox Name="tbINN" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
+            <TextBox Name="tbKPP" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"/>
+            <TextBox Name="tbDirector" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"/>
+            <TextBox Name="tbTel" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
+            <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
+            <TextBox Name="tbLogo" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
+            <TextBox Name="tbPriority" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,250,0">
+            <Label Content="Название" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Агент" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Адрес" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="ИНН" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="КПП" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Директор" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Телефон" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Email" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Логотип" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+            <Label Content="Приоритет" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,15">
+            <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="btnSave_Click"/>
+            <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" />
+            <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

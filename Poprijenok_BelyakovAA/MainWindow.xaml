@@ -5,17 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Icon="Img\Попрыженок.ico"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <Rectangle Grid.Row="0" Fill="#43DCFE"/>
-        <Button Content="Список агентов" HorizontalAlignment="Left" Margin="313,89,0,0" VerticalAlignment="Top" Width="131" Click="Button_Click" Grid.Row="1" Height="62" Background="#FFF9969E" FontFamily="Comic Sans MS"/>
-        <Label Content="Попрыженок" HorizontalAlignment="Left" Margin="364,40,0,0" VerticalAlignment="Top" Foreground="#FF020202" FontSize="24" FontFamily="Comic Sans MS"/>
-        <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="57,5,0,0" VerticalAlignment="Top" Width="100" Source="Img\Попрыженок.png"/>
-        <Button Content="Выход" HorizontalAlignment="Left" Margin="611,226,0,0" VerticalAlignment="Top" Width="131" Click="Button_Click_1" Grid.Row="1" Height="62" Background="#FFF9969E" FontFamily="Comic Sans MS"/>
+        <Button Content="Список агентов" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Click="Button_Click" Grid.Row="1" />
+        <Label Content="Попрыженок" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="#FF020202" Style="{StaticResource Header}"/>
+        <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="50,5,0,0" VerticalAlignment="Center" Width="100" Source="Img\Попрыженок.png"/>
+        <Button Content="Выход" HorizontalAlignment="Right" Margin="0,0,25,25" VerticalAlignment="Bottom" Click="Button_Click_1" Grid.Row="1" />
 
     </Grid>
 </Window>
