@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "C:\Users\sasha\Desktop\Учеба\VS\Poprijenok_BelyakovAA\Poprijenok_BelyakovAA\ModelPoprijenok.edmx" включено. 
+﻿// Создание кода T4 для модели "C:\Users\10180023\Source\Repos\Poprijenok_BelyakovAA\Poprijenok_BelyakovAA\ModelPoprijenok.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

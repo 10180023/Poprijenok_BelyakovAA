@@ -331,6 +331,7 @@
       <LastGenOutput>ModelPoprijenok.Context.cs</LastGenOutput>
       <DependentUpon>ModelPoprijenok.edmx</DependentUpon>
     </Content>
+    <Content Include="ModelPoprijenok.edmx.sql" />
     <Content Include="ModelPoprijenok.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelPoprijenok.edmx</DependentUpon>
