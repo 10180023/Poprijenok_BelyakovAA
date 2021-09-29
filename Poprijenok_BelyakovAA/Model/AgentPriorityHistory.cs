@@ -7,17 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class AgentPriorityHistory
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int ID { get; set; }
+        public int AgentID { get; set; }
+        public System.DateTime ChangeDate { get; set; }
+        public int PriorityValue { get; set; }
+    
+        public virtual Agent Agent { get; set; }
     }
 }

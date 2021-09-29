@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class AgentPriorityHistory
+    public partial class Shop
     {
         public int ID { get; set; }
+        public string Title { get; set; }
+        public string Address { get; set; }
         public int AgentID { get; set; }
-        public System.DateTime ChangeDate { get; set; }
-        public int PriorityValue { get; set; }
     
         public virtual Agent Agent { get; set; }
     }

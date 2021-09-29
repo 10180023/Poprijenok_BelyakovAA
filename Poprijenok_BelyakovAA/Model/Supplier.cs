@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;

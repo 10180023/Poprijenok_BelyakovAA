@@ -7,18 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductMaterial
+    public partial class sysdiagrams
     {
-        public int ProductID { get; set; }
-        public int MaterialID { get; set; }
-        public Nullable<double> Count { get; set; }
-    
-        public virtual Material Material { get; set; }
-        public virtual Product Product { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

@@ -7,24 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class MaterialType
+    public partial class ProductMaterial
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MaterialType()
-        {
-            this.Material = new HashSet<Material>();
-        }
+        public int ProductID { get; set; }
+        public int MaterialID { get; set; }
+        public Nullable<double> Count { get; set; }
     
-        public int ID { get; set; }
-        public string Title { get; set; }
-        public double DefectedPercent { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Material> Material { get; set; }
+        public virtual Material Material { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

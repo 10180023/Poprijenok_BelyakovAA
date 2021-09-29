@@ -7,24 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class AgentType
+    public partial class MaterialCountHistory
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public AgentType()
-        {
-            this.Agent = new HashSet<Agent>();
-        }
-    
         public int ID { get; set; }
-        public string Title { get; set; }
-        public string Image { get; set; }
+        public int MaterialID { get; set; }
+        public System.DateTime ChangeDate { get; set; }
+        public double CountValue { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Agent> Agent { get; set; }
+        public virtual Material Material { get; set; }
     }
 }

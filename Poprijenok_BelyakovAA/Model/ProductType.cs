@@ -7,20 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductSale
+    public partial class ProductType
     {
-        public int ID { get; set; }
-        public int AgentID { get; set; }
-        public int ProductID { get; set; }
-        public System.DateTime SaleDate { get; set; }
-        public int ProductCount { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ProductType()
+        {
+            this.Product = new HashSet<Product>();
+        }
     
-        public virtual Agent Agent { get; set; }
-        public virtual Product Product { get; set; }
+        public int ID { get; set; }
+        public string Title { get; set; }
+        public Nullable<double> DefectedPercent { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Product> Product { get; set; }
     }
 }

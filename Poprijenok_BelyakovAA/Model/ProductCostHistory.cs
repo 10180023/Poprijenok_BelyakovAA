@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class MaterialCountHistory
+    public partial class ProductCostHistory
     {
         public int ID { get; set; }
-        public int MaterialID { get; set; }
+        public int ProductID { get; set; }
         public System.DateTime ChangeDate { get; set; }
-        public double CountValue { get; set; }
+        public decimal CostValue { get; set; }
     
-        public virtual Material Material { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

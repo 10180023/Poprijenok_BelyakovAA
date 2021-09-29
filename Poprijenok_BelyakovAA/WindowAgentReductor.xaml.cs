@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Poprijenok_BelyakovAA.Model;
 
 namespace Poprijenok_BelyakovAA
 {
@@ -33,7 +34,7 @@ namespace Poprijenok_BelyakovAA
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
     }
 }

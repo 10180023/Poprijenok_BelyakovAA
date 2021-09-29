@@ -7,18 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Poprijenok_BelyakovAA
+namespace Poprijenok_BelyakovAA.Model
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Shop
+    public partial class ProductSale
     {
         public int ID { get; set; }
-        public string Title { get; set; }
-        public string Address { get; set; }
         public int AgentID { get; set; }
+        public int ProductID { get; set; }
+        public System.DateTime SaleDate { get; set; }
+        public int ProductCount { get; set; }
     
         public virtual Agent Agent { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

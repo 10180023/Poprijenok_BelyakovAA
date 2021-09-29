@@ -40,8 +40,10 @@
                                         <TextBlock Text="{Binding Priority}"/>
                                     </StackPanel>
                                 </StackPanel>
-                                <StackPanel HorizontalAlignment="Right">
-                                    
+                                <StackPanel Margin="15, 0, 0, 0">
+                                    <Button Name="btnEdit" Content="Изменить" Click="Button_Click"/>
+                                </StackPanel>
+                                <StackPanel Margin="15, 0, 0, 0">
                                     <TextBlock Text="{Binding sale}"/>
                                     <TextBlock Text="00%"/>
                                 </StackPanel>
