@@ -22,13 +22,17 @@ namespace Poprijenok_BelyakovAA
     public partial class PageAgents : Page
     {
         public static Agent agent { get; set; }
+        List<String> Sort = new List<string>() { "Наименование", "Скидка", "Приоритет" };
 
         public PageAgents()
         {
             InitializeComponent();
             DBPoprij.db.Agent.Load();
+            DBPoprij.db.AgentType.Load();
 
             dgAgents.ItemsSource = DBPoprij.db.Agent.ToList();
+            cbTypesFilter.ItemsSource = DBPoprij.db.AgentType.ToList();
+            cbSort.ItemsSource = Sort;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

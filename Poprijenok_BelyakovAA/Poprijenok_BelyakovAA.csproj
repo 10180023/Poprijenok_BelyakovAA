@@ -97,6 +97,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelPoprijenok.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\AgentLogo.cs" />
     <Compile Include="Model\AgentType.cs" />
     <Compile Include="Model\DBPoprij.cs" />
     <Compile Include="PageAgents.xaml.cs">
@@ -192,7 +193,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="picture.png" />
     <Resource Include="Img\picture.png" />
     <Resource Include="Img\Попрыженок.ico" />
     <Resource Include="Img\Попрыженок.png" />

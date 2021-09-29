@@ -6,29 +6,45 @@
       xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAgents" Height="264" Width="792">
+      Title="PageAgents" Height="314" Width="792">
 
-    <Grid Width="780" Height="264">
-        <DataGrid Name="dgAgents" Grid.Row="1" HorizontalAlignment="Left" Margin="0" VerticalAlignment="Center" AutoGenerateColumns="False" Height="264" Width="770">
+    <Grid Width="780" Height="314">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,250" Orientation="Horizontal">
+            <TextBox Name="tbFinder" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="200" Grid.Row="1"/>
+            <ComboBox x:Name="cbTypesFilter" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="cbSort" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+        </StackPanel>
+
+        <DataGrid Name="dgAgents" AutoGenerateColumns="False" Height="234" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="1*"/>
-                <DataGridTextColumn Header="YearSales" Width="1*"/>
-                <DataGridTextColumn Header="Sale" Width="1*"/>
-                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="1*"/>
-                <DataGridTextColumn Header="Type" Binding="{Binding AgentType}" Width="1*"/>
-                <DataGridTextColumn Header="Priority" Binding="{Binding Priority}" Width="1*"/>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Width="1*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Image Source="picture.png" Width="45px" Height="25px"/>
-                        </DataTemplate>
-                    </DataGridTemplateColumn.CellTemplate>
-                </DataGridTemplateColumn>
-                <DataGridTemplateColumn>
-                    <DataGridTemplateColumn.CellTemplate>
-                        <DataTemplate>
-                            <StackPanel>
-                                <Button Content="Edit" Click="Button_Click" Width="45" Height="35"/>
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <Image Source="{Binding LogoAgent}" Width="100px" Height="80px"/>
+                                </StackPanel>
+                                <StackPanel Margin="15,0,0,0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding AgentType}"/>
+                                        <TextBlock Text=" | "/>
+                                        <TextBlock Text="{Binding Title}"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding prodaji}"/>
+                                        <TextBlock Text=" продаж за год"/>
+                                    </StackPanel>
+                                    <TextBlock Text="{Binding Phone}"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Приоритет: "/>
+                                        <TextBlock Text="{Binding Priority}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Right">
+                                    
+                                    <TextBlock Text="{Binding sale}"/>
+                                    <TextBlock Text="00%"/>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>

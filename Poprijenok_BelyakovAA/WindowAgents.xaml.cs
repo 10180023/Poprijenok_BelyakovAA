@@ -20,15 +20,14 @@ namespace Poprijenok_BelyakovAA
     /// </summary>
     public partial class WindowAgents : Window
     {
-        List<String> Sort = new List<string>() { "Наименование", "Скидка", "Приоритет" };
+        
 
         public WindowAgents()
         {
             InitializeComponent();
-            DBPoprij.db.AgentType.Load();
+            
 
-            cbTypesFilter.ItemsSource = DBPoprij.db.AgentType.ToList();
-            cbSort.ItemsSource = Sort;
+            
             frameAgents.Navigate(new PageAgents());
         }
 

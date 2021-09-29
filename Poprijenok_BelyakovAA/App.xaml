@@ -41,10 +41,10 @@
             <Setter Property="Height" Value="35"/>
         </Style>
         
-        <!--Можно будет убрать-->
         <Style TargetType="DataGrid">
             <Setter Property="FontFamily" Value="Comic Sans MS"/>
-            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <!--<Setter Property="Template.Margin" Value="20,0,0,0"/>-->
         </Style>
         
         
