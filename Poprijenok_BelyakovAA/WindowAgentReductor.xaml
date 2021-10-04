@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
         mc:Ignorable="d"
-        Title="WindowAgentReductor" Height="550" Width="800"
+        Title="Редактор" Height="550" Width="800"
+        ResizeMode="NoResize"
         Icon="Img\Попрыженок.ico"
         WindowStartupLocation="CenterScreen">
     <Grid>

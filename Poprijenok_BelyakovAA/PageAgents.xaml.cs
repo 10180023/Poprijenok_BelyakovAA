@@ -24,7 +24,9 @@ namespace Poprijenok_BelyakovAA
     {
         public static Agent agent { get; set; }
         List<String> Sort = new List<string>() { "Наименование", "Скидка", "Приоритет" };
-
+        /// <summary>
+        /// Инициализация компонентов, при открытии окна показываются данные таблицы
+        /// </summary>
         public PageAgents()
         {
             InitializeComponent();
@@ -35,7 +37,11 @@ namespace Poprijenok_BelyakovAA
             cbTypesFilter.ItemsSource = DBPoprij.db.AgentType.ToList();
             cbSort.ItemsSource = Sort;
         }
-
+        /// <summary>
+        /// Передача данных в форму для редактирования данных таблицы
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             agent = dgAgents.SelectedItem as Agent;

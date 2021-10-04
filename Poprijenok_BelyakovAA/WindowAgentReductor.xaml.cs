@@ -21,6 +21,9 @@ namespace Poprijenok_BelyakovAA
     public partial class WindowAgentReductor : Window
     {
         public bool isAdd = false;
+        /// <summary>
+        /// Инициализация компонентов
+        /// </summary>
         public WindowAgentReductor()
         {
             InitializeComponent();
