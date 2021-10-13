@@ -27,7 +27,7 @@ namespace Poprijenok_BelyakovAA
         public WindowAgentReductor()
         {
             InitializeComponent();
-            cbAgents.ItemsSource = DBPoprij.db.AgentType.ToList();
+            //cbAgents.ItemsSource = DBPoprij.db.AgentType.ToList();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)

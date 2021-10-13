@@ -10,31 +10,39 @@
         Icon="Img\Попрыженок.ico"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" Margin="300,0,0,0" VerticalAlignment="Top">
-            <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="233"/>
-            <ComboBox Name="cbAgents" HorizontalAlignment="Left" Margin="0,5,0,0" VerticalAlignment="Top" Width="256"/>
-            <TextBox Name="tbAddr" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380"/>
-            <TextBox Name="tbINN" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="293"/>
-            <TextBox Name="tbKPP" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"/>
-            <TextBox Name="tbDirector" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"/>
-            <TextBox Name="tbTel" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
-            <TextBox Name="tbEmail" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256"/>
-            <TextBox Name="tbLogo" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
-            <TextBox Name="tbPriority" HorizontalAlignment="Left" Margin="0,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Margin="0, 120, 0, 0">
+        <TextBox Name="tbTitle" HorizontalAlignment="Left" Margin="70,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        <ComboBox Name="cbAgents" HorizontalAlignment="Left" Margin="70,5,0,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox Name="tbAddr" HorizontalAlignment="Left" Margin="70,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        <TextBox Name="tbINN" HorizontalAlignment="Left" Margin="70,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        <TextBox Name="tbKPP" HorizontalAlignment="Left" Margin="70,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
+        <TextBox Name="tbDirector" HorizontalAlignment="Left" Margin="70,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300"/>
         </StackPanel>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,250,0">
-            <Label Content="Название" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Агент" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Адрес" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="ИНН" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="КПП" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Директор" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Телефон" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Email" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Логотип" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
-            <Label Content="Приоритет" HorizontalAlignment="Right" Margin="0,5,0,0" VerticalAlignment="Top"/>
+        <StackPanel Grid.Column="0" Margin="0, 120, 0, 0">
+            <Label Content="Название" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="Агент" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="Адрес" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="ИНН" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="КПП" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
+        <Label Content="Директор" HorizontalAlignment="Left" Margin="5,5,0,0" VerticalAlignment="Top"/>
         </StackPanel>
-        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,15">
+        
+        
+        <TextBox Name="tbTel" Grid.Column="1" HorizontalAlignment="Left" Margin="75,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox Name="tbEmail" Grid.Column="1" HorizontalAlignment="Left" Margin="75,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox Name="tbLogo" Grid.Column="1" HorizontalAlignment="Left" Margin="75,210,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <TextBox Name="tbPriority" Grid.Column="1" HorizontalAlignment="Left" Margin="75,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <Label Content="Телефон" Grid.Column="1" HorizontalAlignment="Left" Margin="5,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" Grid.Column="1" HorizontalAlignment="Left" Margin="5,130,0,0" VerticalAlignment="Top"/>
+        <Label Content="Логотип" Grid.Column="1" HorizontalAlignment="Left" Margin="5,210,0,0" VerticalAlignment="Top"/>
+        <Label Content="Приоритет" Grid.Column="1" HorizontalAlignment="Left" Margin="5,170,0,0" VerticalAlignment="Top"/>
+
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Orientation="Horizontal" Margin="0,0,0,15" Grid.ColumnSpan="2">
             <Button Name="btnSave" Content="Сохранить" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Click="btnSave_Click"/>
             <Button Name="btnDelete" Content="Удалить" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" />
             <Button Name="btnCancel" Content="Отмена" HorizontalAlignment="Left" Margin="100,0,0,0" VerticalAlignment="Top" Click="btnCancel_Click"/>

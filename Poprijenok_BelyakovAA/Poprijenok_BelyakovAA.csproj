@@ -100,7 +100,7 @@
     <Compile Include="Model\AgentLogo.cs" />
     <Compile Include="Model\AgentTypePartial.cs" />
     <Compile Include="Model\DBPoprij.cs" />
-    <Compile Include="PageAgents.xaml.cs">
+    <Compile Include="Pages\PageAgents.xaml.cs">
       <DependentUpon>PageAgents.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Product.cs">
@@ -145,7 +145,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="PageAgents.xaml">
+    <Page Include="Pages\PageAgents.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
