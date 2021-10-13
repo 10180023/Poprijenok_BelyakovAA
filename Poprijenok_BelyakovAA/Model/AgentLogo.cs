@@ -8,6 +8,6 @@ namespace Poprijenok_BelyakovAA.Model
 {
     public partial  class Agent
     {
-        public string LogoAgent => Logo == null ? "../../Img/picture.png" : "../.." + Logo;
+        public string LogoAgent => Logo == null ? "../../Img/picture.png" : Logo;
     }
 }

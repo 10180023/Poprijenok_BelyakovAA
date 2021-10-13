@@ -48,16 +48,32 @@ namespace Poprijenok_BelyakovAA
             WindowAgentReductor windowAgentReductor = new WindowAgentReductor();
             windowAgentReductor.Show();
 
-            //windowAgentReductor.tbAddr.Text = agent.Address;
-            //windowAgentReductor.tbDirector.Text = agent.DirectorName;
-            //windowAgentReductor.tbEmail.Text = agent.Email;
-            //windowAgentReductor.tbINN.Text = agent.INN.ToString();
-            //windowAgentReductor.tbKPP.Text = agent.KPP.ToString();
-            //windowAgentReductor.tbLogo.Text = agent.Logo.ToString();
-            //windowAgentReductor.tbPriority.Text = agent.Priority.ToString();
-            //windowAgentReductor.tbTel.Text = agent.Phone.ToString();
-            //windowAgentReductor.tbTitle.Text = agent.Title;
-            //windowAgentReductor.cbAgents.SelectedIndex = (int)agent.AgentTypeID - 1;
+            windowAgentReductor.tbAddr.Text = agent.Address;
+            windowAgentReductor.tbDirector.Text = agent.DirectorName;
+            windowAgentReductor.tbEmail.Text = agent.Email;
+            windowAgentReductor.tbINN.Text = agent.INN.ToString();
+            windowAgentReductor.tbKPP.Text = agent.KPP.ToString();
+            windowAgentReductor.tbLogo.Text = agent.Logo.ToString();
+            windowAgentReductor.tbPriority.Text = agent.Priority.ToString();
+            windowAgentReductor.tbTel.Text = agent.Phone.ToString();
+            windowAgentReductor.tbTitle.Text = agent.Title;
+            windowAgentReductor.cbAgents.SelectedIndex = (int)agent.AgentTypeID - 1;
         }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowAgentReductor windowAgentReductor = new WindowAgentReductor();
+            windowAgentReductor.isAdd = true;
+            windowAgentReductor.Show();
+        }
+
+        //private void UpdateAgents()
+        //{
+        //    var currentAgents = DBPoprij.db.Agent.ToList();
+        //    if (cbTypesFilter.SelectedIndex > 0)
+        //    {
+        //        currentAgents = currentAgents.Where(p => p.AgentType.Contains(cbTypesFilter.SelectedItem as AgentType)).ToList();
+        //    }
+        //}
     }
 }

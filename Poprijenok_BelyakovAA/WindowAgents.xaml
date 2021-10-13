@@ -14,7 +14,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <Rectangle Grid.Row="0" Fill="#43DCFE"/>
+        <Rectangle Grid.Row="0"/>
         <Label Content="Попрыженок" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Foreground="#FF020202" Style="{StaticResource Header}"/>
         <Image Name="logo" HorizontalAlignment="Left" Height="100" Margin="50,5,0,0" VerticalAlignment="Center" Width="100" Source="Img\Попрыженок.png"/>
         <Button Name="btnBack" Content="Назад" Grid.Row="0" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="60" Click="btnBack_Click"/>

@@ -6,23 +6,31 @@
       xmlns:local="clr-namespace:Poprijenok_BelyakovAA"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageAgents" Height="314" Width="792">
+      Title="PageAgents" >
 
-    <Grid Width="780" Height="314">
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,250" Orientation="Horizontal">
-            <TextBox Name="tbFinder" HorizontalAlignment="Left" Margin="0,0,0,0" TextWrapping="Wrap" Text="Введите для поиска" VerticalAlignment="Top" Width="200" Grid.Row="1"/>
-            <ComboBox x:Name="cbTypesFilter" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120"/>
-            <ComboBox x:Name="cbSort" HorizontalAlignment="Left" Margin="150,0,0,0" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
-        </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="tbFinder" Grid.Column="0" Grid.Row="0" TextWrapping="Wrap" Text="Введите для поиска" Margin="5"/>
+        <ComboBox x:Name="cbTypesFilter" Grid.Column="1" Grid.Row="0" Margin="5"/>
+        <ComboBox x:Name="cbSort" Grid.Column="2" Grid.Row="0" Margin="5" />
 
-        <DataGrid Name="dgAgents" AutoGenerateColumns="False" Height="234" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top">
+            <DataGrid Name="dgAgents" AutoGenerateColumns="False" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Margin="10">
             <DataGrid.Columns>
-                <DataGridTemplateColumn Width="1*">
+                <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <StackPanel Orientation="Horizontal">
                                 <StackPanel>
-                                    <Image Source="{Binding LogoAgent}" Width="100px" Height="80px"/>
+                                    <Image Source="{Binding LogoAgent}"/>
                                 </StackPanel>
                                 <StackPanel Margin="15,0,0,0">
                                     <StackPanel Orientation="Horizontal">
@@ -53,6 +61,8 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        
+
+        <Button Name="btnAdd" Grid.Row="2" Grid.ColumnSpan="3" Content="Добавить" Click="btnAdd_Click"/>
+
     </Grid>
 </Page>
