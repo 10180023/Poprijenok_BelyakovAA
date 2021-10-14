@@ -1,6 +1,6 @@
-###Poprijenok_BelyakovAA
+Poprijenok_BelyakovAA
 
-#Запуск проекта:
+Запуск проекта:
 
 1. Запустить Visual Studio 2019 и склонировать проект с GitHub.
 2. Запустить MS SQL Server Management Studio 18.8.
